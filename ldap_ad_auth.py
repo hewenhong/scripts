@@ -122,9 +122,9 @@ class LDAPLoginServerAuth(BaseLoginServerAuth):
 
 def main():
     args = get_args()
-    if args.login_server_type == 'ad':
+    if args.server_type == 'ad':
         login_server = ADLoginServerAuth(args.host, args.base_dn, args.port)
-    elif args.login_server_type == 'ldap':
+    elif args.server_type == 'ldap':
         login_server = LDAPLoginServerAuth(args.host, args.base_dn, args.port)
     else:
         print "not support type"
